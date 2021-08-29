@@ -32,7 +32,8 @@ body {
     max-height: 200px;
     border-radius: 0.5rem;
     color: yellow;
-    font-size: 0.9rem;
+    font-weight: bold;
+    font-size: 0.85rem;
     transition: transform 0.02s ease-out, background 0.1s ease-in, border 0.02s ease-out;
 }
 
@@ -43,12 +44,14 @@ body {
     margin: 0 auto 0.75rem auto;
 }
 
+
+
 .btn:hover {
     /* transform: scale(0.9); */
     background: rgba(0,0,0,0.7);
 }
 
 .btn.play {
-    transform: scale(1.05);
+    transform: scale(1.02);
     border: 2px solid yellow;
 }
