@@ -3,3 +3,52 @@
     padding: 0;
     margin: 0;
 }
+
+body {
+    background: url('./assets/images/instruments.jpg') no-repeat center center/ cover;
+    
+    width: 100%;
+}
+
+#body-wrapper {
+    background: rgba(0, 0, 0, 0.5);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+    padding: 2rem 1rem;
+}
+
+.btn {
+    background: rgba(0,0,0,0.4);
+    outline: none;
+    border: 2px solid #f4f4f4;
+    padding: 1rem;
+    width: 100px;
+    max-height: 200px;
+    border-radius: 0.5rem;
+    color: yellow;
+    font-size: 0.9rem;
+    transition: transform 0.02s ease-out, background 0.1s ease-in, border 0.02s ease-out;
+}
+
+.btn span.sound-key {
+    font-size: 1.5rem;
+    display: block;
+    color: #fff;
+    margin: 0 auto 0.75rem auto;
+}
+
+.btn:hover {
+    /* transform: scale(0.9); */
+    background: rgba(0,0,0,0.7);
+}
+
+.btn.play {
+    transform: scale(1.05);
+    border: 2px solid yellow;
+}
