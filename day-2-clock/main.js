@@ -8,6 +8,16 @@
         const minute = new Date().getMinutes();
         const second = new Date().getSeconds();
 
+        if(second == 0) {
+            secondHand.style.transition = "none";
+            // secondHand.style.transform = "none"
+        }
+        else {
+            secondHand.style.transition = "transform 0.5s cubic-bezier(0.41, 0.11, 0.46, 1.28)";
+        }
+
+        
+
 
         const hourAngle = ((hour/ 12) * 360) + 90;
         const minuteAngle = ((minute / 60) * 360) + 90;
