@@ -1,3 +1,34 @@
+
+window.addEventListener('keydown', handleKeyDown);
+
+function handleKeyDown(e) {
+    let keyCode = e.keyCode;
+    // console.log(keyCode);
+    const audio = document.querySelector(`audio[data-key="${keyCode}"]`);
+
+    if(audio!==null) {
+        // console.log(audio);
+        audio.currentTime = 0;
+        audio.play();
+        const button = document.querySelector(`div.btn[data-key="${keyCode}"]`);
+        // console.log(button);
+        button.classList.add('play');
+        // setTimeout( ()=> {
+        //     button.classList.remove('play');
+        // },100);
+    }
+}
+
+const soundButtons = document.querySelectorAll('.btn');
+soundButtons.forEach(btn => {
+    btn.addEventListener('transitionend', () => {
+        btn.classList.remove('play');
+    })
+});
+
+
+/* My Implementation */
+/*
 const soundButtons = document.querySelectorAll('.btn');
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -24,4 +55,5 @@ function playSound(e) {
         target.classList.remove('play');
     }, 200);
 }
+*/
 

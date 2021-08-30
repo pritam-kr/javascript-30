@@ -24,6 +24,7 @@ body {
 }
 
 .btn {
+    text-align: center;
     background: rgba(0,0,0,0.4);
     outline: none;
     border: 2px solid #f4f4f4;
@@ -34,10 +35,10 @@ body {
     color: yellow;
     font-weight: bold;
     font-size: 0.85rem;
-    transition: transform 0.02s ease-out, background 0.1s ease-in, border 0.02s ease-out;
+    transition: all 0.07s ease-out;
 }
 
-.btn span.sound-key {
+.btn kbd {
     font-size: 1.5rem;
     display: block;
     color: #fff;
