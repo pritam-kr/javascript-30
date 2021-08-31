@@ -1,0 +1,53 @@
+:root {
+    --image-padding: 10px;
+    --image-background-color: #000000;
+    --image-blur: 5px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    min-height: 100%;
+    width: 100%;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+#page-wrapper {
+    max-width: 900px;
+    margin: 2rem auto;
+    text-align: center; 
+}
+
+.image-manip-form {
+    padding: 1rem;
+    font-size: 1.5rem;
+    margin: 1rem auto;
+}
+
+.image-manip-form input {
+    margin: 1rem 0.5rem;
+    width: 50%;
+}
+
+.image-manip-form label {
+    margin: 1rem 0.5rem 1rem 0;
+}
+
+.image-container {
+    width: 100%;
+    padding: 1rem;
+}
+
+.image-container img {
+    background-color: var(--image-background-color);
+    filter: blur(var(--image-blur));
+    max-width: 100%;
+    padding: var(--image-padding);
+    text-align: center;
+}

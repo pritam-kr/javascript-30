@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>3/30 | Variables</title>
+
+        <link rel="stylesheet" href="styles.css">
+    </h>
+    <body>
+        <div id="page-wrapper">
+            <div class="image-manip-form">
+                <div class="form-group">
+                    <label for="range-padding">Padding</label>
+                    <input type="range" name="range-padding" value="10" data-sizing="px" min="1" max="200" id="range-padding" min="0">
+                    <span class="value-padding"></span>
+                </div>
+                <div class="form-group">
+                    <label for="range-blur">Blur</label>
+                    <input type="range" name="range-blur" value="5" data-sizing="px" min="0" max="20" id="range-blur">
+                    <span class="value-blur"></span>
+                </div>
+                <div class="form-group">
+                    <label for="bg-color-picker">Background Color</label>
+                    <input type="color" name="bg-color-picker" id="bg-color-picker">
+                    <span class="value-bg-color"></span>
+                </div>
+                
+            </div>
+            <div class="image-container">
+                <img src="./assets/images/skyscrapers2.jpg" alt="Scyscrapers" class="img">
+            </div>
+        </div>
+
+        <script src="./main.js"></script>
+    </body>
+</html>
