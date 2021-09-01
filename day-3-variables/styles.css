@@ -26,17 +26,26 @@ body {
 
 .image-manip-form {
     padding: 1rem;
-    font-size: 1.5rem;
+    
     margin: 1rem auto;
 }
 
 .image-manip-form input {
-    margin: 1rem 0.5rem;
-    width: 50%;
+    width: 60%;
+    margin-right: 0.5rem;
+}
+
+.image-manip-form span {
+    width: 40%;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .image-manip-form label {
-    margin: 1rem 0.5rem 1rem 0;
+    margin: 1rem 0 0.5rem 0;
+    display: block;    
+    font-size: 1.5rem;
 }
 
 .image-container {
