@@ -22,13 +22,58 @@ body {
 
 
 .filter-form {
-    max-width: 100%;
+    max-width: 500px;
+    margin: auto;
 }
 
 .filter-form input {
     padding: 0.7rem 1rem;
     font-size: 1.2rem;
     outline: none;
-    border: none;
+    display: block;
+    width: 100%;
+    border-radius: 0.5rem;
+    border: 10px solid #ccc;
+
     margin-top: 1.5rem;
+    background-color: #f4f4f4;
+}
+
+.filter-outupt {
+    width: 80%;
+    margin: auto;
+}
+
+.filter-outupt li {
+    background-color: #ccc;
+    list-style: none;
+    color: #222;
+    padding: 1rem;
+    border: 1px solid #333;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: capitalize;
+}
+
+.filter-outupt li:nth-child(odd) {
+    transform: perspective(100px) rotateX(-3deg) translateY(3px);
+   background: #EFEFEF;
+}
+
+.filter-outupt li:nth-child(even) {
+    transform: perspective(100px) rotateX(3deg) translateY(3px);
+}
+
+.highlighted {
+    background-color:#eecf22;
+}
+
+.filter-outupt li span {
+    text-transform: capitalize !important;
+}
+
+span.population {
+    font-size: 1.1rem;
 }
