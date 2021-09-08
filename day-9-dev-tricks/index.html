@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dev Tricks!</title>
+    </head>
+    <body>
+        <p class="change-color" onclick="makeGreen()">xBREAKxDOWNx</p>
+
+        <script>
+            const dogs = [
+                {
+                    name: 'Snickers',
+                    age: 2
+                },
+                {
+                    name: 'Hugo',
+                    age: 8
+                }
+            ]
+
+            function makeGreen() {
+                const p = document.querySelector('.change-color');
+                p.style.color = 'green';
+                p.style.fontSize = '1.5rem';
+
+                // Inspect -> Right click on the element you want to inspect -> break on -> "Atrribute modifications"
+
+                // Add a breakpoint, and opens debugger. And tells the line of code that changes the attributes
+            }
+
+            // console methods
+
+            // Regular
+            console.log('I am a regular console log!');
+
+            // Interpolated
+            let x = 10;
+            console.log('Hello I am a %d number!', x);
+            // or
+            console.log(`Hello I am a ${x} number using backticks!`);
+
+            // Style with %c
+            console.log('%c I am a styled text', 'font-size: 1.5rem; background-color: red');
+
+            // warning!
+            console.log('Ohh I am a warning!');
+
+            // error
+            console.error('I am an error');
+
+            // information
+            console.info('This log shows information!');
+
+            // Testing
+            const p = document.querySelector('p');
+            console.assert(1 === 1, 'That is correct!');
+            console.assert(p.classList.contains('paragraph'), 'You selected the wrong tag!'); // Nothing happens if the assert is true
+
+            // clear console
+            console.clear();
+
+            // Viewing DOM elements
+            console.log(p);
+            console.dir(p); // shows available methods and properties on the element. Gives a dropdown.. And gives all the different properties, prototypes etc
+
+            console.clear();
+            // Grouping things
+            dogs.forEach(dog => {
+                console.group(`${dog.name}`);
+                // Default 
+                // can also use groupCollapsed. Will collapse by default then
+                console.log(`This is ${dog.name}`);
+                console.log(`${dog.name} is ${dog.age} old years`);
+                console.groupEnd(`${dog.name}`); // same string to start the group
+            });
+
+            // Counting
+            console.count('Bharati');
+            console.count('Bharati');
+            console.count('Sharada');
+            console.count('Sharada');
+            console.count('Sharada');
+            console.count('Bharati');
+            console.count('Bharati');
+            console.count('Sharada');
+            console.count('Sharada');
+            console.count('Bharati');
+            console.count('Sharada');
+            console.count('Sharada');
+
+            // timing
+            console.time('Fetching Data');
+            fetch('https://api.github.com/users/bharati-21')
+            .then(res => res.json())
+            .then(res => console.log(res));
+            console.timeEnd('Fetching Data'); // smae string to start the time
+
+            dogs.forEach(dog => {
+                console.table(dog);
+            });
+            // The object must have same properties
+        </script>
+    </body>
+</html>
