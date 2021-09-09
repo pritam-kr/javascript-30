@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inbox {
+    background-color: #333;
+    color: #fff;
+}
+
+.item {
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+input[type="checkbox"] {
+    margin: 1rem; 
+}
+
+input[type="checkbox"]:checked + p {
+    text-decoration: line-through;
+}
+
+.item > p {
+    border-left: 1px solid #ccc;
+    display: inline-block;
+    padding: 1rem;
+}
