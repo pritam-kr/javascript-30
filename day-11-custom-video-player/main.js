@@ -8,6 +8,9 @@ const sliders = document.querySelectorAll('.player_slider');
 const playButton = document.querySelector('.toggle');
 const skipButtons = document.querySelectorAll('[data-skip]');
 
+const btnFullScreen = document.querySelector('.btn-full-screen');
+
+
 let mousedown = false;
  
 
@@ -18,13 +21,10 @@ videoPlayer.addEventListener('pause', updateButton);
 videoPlayer.addEventListener('timeupdate', handleProgress);
 
 progress.addEventListener('click', seek);
-
 progress.addEventListener('mousemove', (e) => {
     mousedown && seek(e);
 
 });
-
-
 progress.addEventListener('mousedown', () => {
     mousedown = true;
 });
@@ -32,16 +32,9 @@ progress.addEventListener('mouseup', () => {
     mousedown = false;
 });
 
-progressFilled.style.flexBasis = 0+"%";
+btnFullScreen.addEventListener('click', changeScreenSize);
 
-function updateButton(e) {
-    if(this.paused) {
-        playButton.innerHTML = `<i class="fas fa-play"></i>`;
-    }
-    else {
-        playButton.innerHTML = `<i class="fas fa-pause"></i>`;
-    }
-}
+progressFilled.style.flexBasis = 0+"%";
 
 function playPause(e) {
     if(videoPlayer.paused) {
@@ -52,6 +45,17 @@ function playPause(e) {
         videoPlayer.pause();
     }
 }
+
+function updateButton(e) {
+    if(this.paused) {
+        playButton.innerHTML = `<i class="fas fa-play"></i>`;
+    }
+    else {
+        playButton.innerHTML = `<i class="fas fa-pause"></i>`;
+    }
+}
+
+
 
 
 skipButtons.forEach(button => {
@@ -102,8 +106,6 @@ function handleProgress() {
     progressFilled.style.flexBasis = `${percent}%`;
 }
 
-
-
 function seek(e) {
     console.log(e);
 
@@ -112,3 +114,8 @@ function seek(e) {
     videoPlayer.currentTime = seekTime;
 }
 
+
+function changeScreenSize(e) {
+    const fullScreen = videoPlayer.requestFullscreen;
+    videoPlayer.requestFullscreen();
+}
